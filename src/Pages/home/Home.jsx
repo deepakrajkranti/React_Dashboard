@@ -28,6 +28,7 @@ const Home = () => {
               Latest Transaction
             </div>
             <Table/>
+            
           </div>
         </div>
     </div>
