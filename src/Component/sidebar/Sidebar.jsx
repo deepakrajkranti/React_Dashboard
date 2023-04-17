@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
@@ -13,7 +13,10 @@ import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSyst
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { Link } from "react-router-dom";
+import { Timeline } from "@mui/icons-material";
+import Form from "../../Pages/form/Form";
 const Sidebar = () => {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <div className="sidebar">
       <div className="top">
@@ -81,9 +84,16 @@ const Sidebar = () => {
             <ExitToAppIcon className="icon" />
             <span>Logout</span>
           </li>
+          
         </ul>
       </div>
-      <div className="bottom">color options</div>
+      <div className="bottom">
+        {/* <Link to="/form" style={{ textDecoration: "none" }}> */}
+        <Timeline classsName="icon"/>
+      <span onClick={() => setOpenModal(true)}>Tracker</span>
+      {openModal && <Form/>}
+      {/* </Link> */}
+      </div>
     </div>
   );
 };

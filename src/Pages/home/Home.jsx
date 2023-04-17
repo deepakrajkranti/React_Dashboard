@@ -19,7 +19,7 @@ const Home = () => {
           <Widgets type="earning" />
           <Widgets type="balance" />
         </div>
-          <div className="charts">
+          <div className="charts"> 
             <Featured/>
             <Chart/>
           </div>

@@ -4,6 +4,7 @@ import Login from "./Pages/login/Login";
 import List from "./Pages/list/List";
 import Single from "./Pages/single/Single";
 import New from "./Pages/new/New";
+import Form from "./Pages/form/Form";
 
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
                 element={<New inputs={productInputs} title="Add New Product" />}
               /> */}
             </Route> 
+            <Route path="form">
+              <Route index element={<Form/>} />
+            </Route>
           </Route>
         </Routes>
       </BrowserRouter>
