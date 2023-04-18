@@ -15,6 +15,7 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import { Link } from "react-router-dom";
 import { Timeline } from "@mui/icons-material";
 import Form from "../../Pages/form/Form";
+
 const Sidebar = () => {
   const [openModal, setOpenModal] = useState(false);
   return (
@@ -88,11 +89,12 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className="bottom">
-        {/* <Link to="/form" style={{ textDecoration: "none" }}> */}
+        {/* <Link to="/form" style={{ textDecoration: "none" }}>  */}
         <Timeline classsName="icon"/>
       <span onClick={() => setOpenModal(true)}>Tracker</span>
       {openModal && <Form/>}
-      {/* </Link> */}
+       {/* </Link> */}
+       
       </div>
     </div>
   );

@@ -31,9 +31,9 @@ function App() {
                 element={<New inputs={productInputs} title="Add New Product" />}
               /> */}
             </Route> 
-            <Route path="form">
+            {/* <Route path="form">
               <Route index element={<Form/>} />
-            </Route>
+            </Route> */}
           </Route>
         </Routes>
       </BrowserRouter>
