@@ -89,11 +89,11 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className="bottom">
-        {/* <Link to="/form" style={{ textDecoration: "none" }}>  */}
+        <Link to="/Pages/form" style={{ textDecoration: "none" }}> 
         <Timeline classsName="icon"/>
       <span onClick={() => setOpenModal(true)}>Tracker</span>
-      {openModal && <Form/>}
-       {/* </Link> */}
+      {/* {openModal && <Form/>} */}
+       </Link>
        
       </div>
     </div>

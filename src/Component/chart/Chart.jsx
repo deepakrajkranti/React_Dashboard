@@ -1,5 +1,6 @@
 import React from 'react'
-import './chart.scss'
+// import './chart.scss'
+import './chart.css'
 import {
   AreaChart,
   Area,
@@ -22,6 +23,7 @@ const Chart = () => {
     <div className="chart">
     {/* Chart */}
     <div className="title">Last 6 Month Revenue</div>
+        <div className="container"> 
       <ResponsiveContainer width="100%" aspect={2/1}>
         <AreaChart
           width={730}
@@ -30,8 +32,8 @@ const Chart = () => {
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
         >
           <defs>
-            <linearGradient id="total" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
+            <linearGradient id="total" x1="0" y1="0" x2="0" y2="1"> 
+              <stop offset="5%" stopColor="#8884d8" stopOpacity={0.4} />
               <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
             </linearGradient>
           </defs>
@@ -47,6 +49,7 @@ const Chart = () => {
           />
         </AreaChart>
       </ResponsiveContainer>
+      </div>
     </div>
   )
 }

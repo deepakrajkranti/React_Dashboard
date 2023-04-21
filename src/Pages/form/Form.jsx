@@ -14,10 +14,14 @@ const Form = () => {
   if (myValue === "Task" || myValue === "Defect") {
     work = true;
   }
-
+     
+    const onSubmitHandler = () => {
+            
+    }
   return (
     <div className="overlay">
       <div className="FormBase">
+      <form onSubmit={onSubmitHandler}>
         <div className="container">
           <p>Enter Your Details</p>
         </div>
@@ -82,6 +86,7 @@ const Form = () => {
           <h4>Comments</h4>
           <input type="text" required />
         </div>
+        </form>
       </div>
     </div>
   );
