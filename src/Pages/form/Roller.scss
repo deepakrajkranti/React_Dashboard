@@ -1,0 +1,29 @@
+.Roller{
+    display: flex;
+    flex-direction: column;
+    margin-top:120px ;
+    margin-right: 100px;
+
+    .container{
+        display: flex;
+        border:2px solid black;
+        .left{
+            display: flex;
+            flex:1;
+            justify-content: center;
+            align-items: center;
+        }
+        .center{
+            display: flex;
+            flex:1;
+            justify-content: center;
+            align-items: center;
+        }
+        .right{
+            display: flex;
+            flex:1;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

@@ -89,7 +89,7 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className="bottom">
-        <Link to="/Pages/form" style={{ textDecoration: "none" }}> 
+        <Link to="/form" style={{ textDecoration: "none" }}> 
         <Timeline classsName="icon"/>
       <span onClick={() => setOpenModal(true)}>Tracker</span>
       {/* {openModal && <Form/>} */}
