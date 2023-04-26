@@ -11,18 +11,51 @@
   // display: block;
 }
 .container{
+  .navba{
+    height:40px;
+    display: flex;
+    border-bottom: 1px solid gray;
+   justify-content: space-between;
+   align-items: center;
+   .nav-left{
+     
+      span{
+        font-weight: 800;
+        padding: 10px;
+        color:orangered;
+      }
+   }
+   .nav-right{
+    span{
+      font-weight: 600;
+      padding: 20px;
+    }
+   }
+  }
+  .middle{
   display:flex;
+  margin-top: 10px;
   .left-part{
+    display: flex;
     flex:1;
     // border-right: 2px solid green;
+    align-items: center;
+    justify-content: center;
   }
   .right-part{
+   
     flex:2;
+    // -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    // box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    // border-radius: 10px;
     .popup{
        position:absolute;
-       top:40px;
+       top:60px;
        right:40px;
-       border: 2px solid orangered;
+       border: 1px solid orangered;
+     background-color: orangered;
+     padding: 5px;
+     border-radius: 10px;
        cursor: pointer;
     }
 .FormBase{
@@ -92,4 +125,5 @@
     }
 }
 }
+  }
 }

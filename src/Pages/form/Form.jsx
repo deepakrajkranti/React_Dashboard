@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./form.scss";
 import Roller from "./Roller";
+import Layout from "./Layout";
+import DasIcon from "./DasIcon";
 
 const Form = () => {
   const options = ["Story", "Task", "Defect", "Bug"];
@@ -12,47 +14,79 @@ const Form = () => {
   const option3 = ["In Progress", "Completed", "Blocked"];
   const [mystatus, setMystatus] = useState(option3[0]);
   // console.log(myValue);
-  const [popup,setpopup]=useState(false);
+  const [popup, setpopup] = useState(false);
   let work = false;
   if (myValue === "Task" || myValue === "Defect") {
     work = true;
   }
   // var popup=false;
   const [inputFields, setInputFields] = useState([
-    {sprint: '', week: '',ParentTicket:'',Parent:'',Ticket:'',hour:'',status1:'',comment:''}
-])
-  const[data,setData]=useState([]);
+    {
+      sprint: "",
+      week: "",
+      ParentTicket: "",
+      Parent: "",
+      Ticket: "",
+      hour: "",
+      status1: "",
+      comment: "",
+    },
+  ]);
+  const [data, setData] = useState([]);
 
-const handleChange = (event) => {
-  setInputFields({
-    ...inputFields,
-    [event.target.name]: event.target.value,
-  });
-};
+  const handleChange = (event) => {
+    setInputFields({
+      ...inputFields,
+      [event.target.name]: event.target.value,
+    });
+  };
   const onSubmitHandler = (event) => {
     event.preventDefault();
     console.log(inputFields);
-    
-    setpopup(false);
-    
-    const newtodos=[...data,inputFields];
-    setData(newtodos);
-     console.log(data);
 
+    setpopup(false);
+
+    const newtodos = [...data, inputFields];
+    setData(newtodos);
+    console.log(data);
   };
   return (
     <div className="container">
-      <div className="left-part">left</div>
-      <div className="right-part">
-      <span className="popup" onClick={()=>{
-            setpopup(true);
-            console.log(popup);
-          }}>
-                click me 
+      <div className="navba">
+        <div className="nav-left">
+          <span>Daily Tracker</span>
+        </div>
+        <div className="nav-right">
+          <span>Account</span>
+        </div>
+      </div>
+      <div className="middle">
+        <div className="left-part">
+          <DasIcon />
+        </div>
+        <div className="right-part">
+          <span
+            className="popup"
+            onClick={() => {
+              setpopup(true);
+              console.log(popup);
+            }}
+          >
+            Add Task
           </span>
 
-          <Roller data={data}/>
-         { popup && (
+          <Roller
+            data={data}
+            inputFields={inputFields}
+            option1={option1}
+            options={options}
+            option2={option2}
+            option3={option3}
+            onSubmitHandler={onSubmitHandler}
+            handleChange={handleChange}
+          />
+          {popup && (
+            /*       
         <div className="overlay1">
           <div className="FormBase">
             <form onSubmit={onSubmitHandler}>
@@ -138,7 +172,18 @@ onChange={handleChange}
           </div>
 
         </div>
-         )}  
+        */
+            <Layout
+              inputFields={inputFields}
+              option1={option1}
+              options={options}
+              option2={option2}
+              option3={option3}
+              onSubmitHandler={onSubmitHandler}
+              handleChange={handleChange}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

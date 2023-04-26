@@ -50,7 +50,7 @@ const Layout = ({
               ))}
             </select>
           </div>
-          <div className="container">
+          {/* <div className="container">
             {work && (
               <>
                 <h4> Parent Ticket No.</h4>
@@ -63,7 +63,7 @@ const Layout = ({
                 />
               </>
             )}
-          </div>
+          </div> */}
           <div className="container">
             <h4> Ticket No.</h4>
             <input
