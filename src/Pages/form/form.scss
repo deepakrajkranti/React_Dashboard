@@ -36,11 +36,12 @@
   display:flex;
   margin-top: 10px;
   .left-part{
-    display: flex;
+    // display: flex;
     flex:1;
     // border-right: 2px solid green;
-    align-items: center;
-    justify-content: center;
+    // align-items: center;
+    // justify-content: center;
+    margin: 30px;
   }
   .right-part{
    

@@ -10,7 +10,11 @@ const Roller = ({data, inputFields,
   onSubmitHandler,
   handleChange,}) => {
     // console.log(data[0]);
-    const[formula,setformula]=useState(false);
+    // const[formula,setformula]=useState(false);
+    const [checkBoxState, setcheckBoxState] = useState([false,false,false,false,false]);
+    const HanldeCheck = (index) => {
+      setcheckBoxState(prevState => prevState.map((item, idx) => idx === index ? !item : item))
+  };
   return (
     <div className='Roller'>
 
@@ -25,13 +29,13 @@ const Roller = ({data, inputFields,
             </div>
             <div className="right">
              {todo.comment}
-              <div className="edit1" onClick={()=>setformula(!formula)}>
+              <div className="edit1" onClick={()=>HanldeCheck(index)}>
                    <EditAttributesIcon  />
               </div>
             </div>
             <>
             {
-              formula && <Layout inputFields={data[index]} option1={option1}  options={options} option2={option2} option3={option3} onSubmitHandler={onSubmitHandler} handleChange={handleChange} />
+              checkBoxState[index] && <Layout inputFields={data[index]} option1={option1}  options={options} option2={option2} option3={option3} onSubmitHandler={onSubmitHandler} handleChange={handleChange} />
             }
             </>
         </div>

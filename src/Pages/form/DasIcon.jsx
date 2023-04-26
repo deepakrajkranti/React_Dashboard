@@ -17,10 +17,7 @@ const DasIcon = () => {
            <button className="order-no">
                  AED118902E3
            </button>
-
-       </div>
-
-      
+       </div>   
     </div>
   )
 }
