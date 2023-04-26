@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 import { Timeline } from "@mui/icons-material";
 import Form from "../../Pages/form/Form";
 
-const Sidebar = () => {
+const Sidebar = ({handleclick}) => {
   const [openModal, setOpenModal] = useState(false);
   return (
     <div className="sidebar">
@@ -89,11 +89,11 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className="bottom">
-        <Link to="/form" style={{ textDecoration: "none" }}> 
+        {/* <Link to="/form" style={{ textDecoration: "none" }}>  */}
         <Timeline classsName="icon"/>
-      <span onClick={() => setOpenModal(true)}>Tracker</span>
+      <span onClick={() => handleclick()}>Tracker</span>
       {/* {openModal && <Form/>} */}
-       </Link>
+       {/* </Link> */}
        
       </div>
     </div>

@@ -52,14 +52,14 @@ const Form = () => {
   };
   return (
     <div className="container">
-      <div className="navba">
+      {/* <div className="navba">
         <div className="nav-left">
           <span>Daily Tracker</span>
         </div>
         <div className="nav-right">
           <span>Account</span>
         </div>
-      </div>
+      </div> */}
       <div className="middle">
         <div className="left-part">
           <DasIcon />
