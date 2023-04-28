@@ -49,6 +49,7 @@ const Form = () => {
     const newtodos = [...data, inputFields];
     setData(newtodos);
     console.log(data);
+    
   };
   return (
     <div className="container">

@@ -1,4 +1,14 @@
-
+.overlay1{
+  background-color: rgb(0, 0, 0,0.5); 
+   position: fixed;
+   left:0;
+   right:0;
+   top:0;
+   bottom:0;
+   width: 100vw;
+   height: 100vh;
+   // display: none;
+   // display: block;
    .FormBase{
        width:300px;
        height:350px;
@@ -12,10 +22,10 @@
        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
         box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
         border-radius: 10px;
-       // position: fixed;
-       // top: 40%;
-       // left: 50%;
-       // transform: translate(-50%, -50%);
+       position: fixed;
+       top: 40%;
+       left: 50%;
+       transform: translate(-50%, -50%);
        background-color: rgb(80, 90, 221);
        // background-color: rgb(223, 33, 141);
        // margin-bottom: 10px;
@@ -65,4 +75,4 @@
          }
        }
    }
- 
+  }
